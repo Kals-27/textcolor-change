@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Changing Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .colorful-text {
+            font-size: 24px;
+            color: rgb(0, 0, 0); 
+            transition: color 0.5s ease;
+        }
+        p {
+  background-image: url('PTI07_30_2023_000149A (1).jpg');
+}
+    </style>
+</head>
+<body>
+    <h1>Click the below<u> CHANGE COLOUR</u> button to change the paragraph's colour</h1>
+    <h2>About PSLV-C56</h2>
+    <p style="text-align:center;"class="colorful-text" id="colorfulText">The launch of PSLV-C56 carrying DS-SAR satellite, along with 6 co-passengers from the first launch-pad of SDSC-SHAR, Sriharikota is accomplished successfully on July 30, 2023 at 06:30 hrs IST.
+        PSLV-C56 is configured in its core-alone mode, similar to that of C55. It would launched DS-SAR, a 360 kg satellite into a Near-equatorial Orbit (NEO) at 5 degrees inclination and 535 km altitude.
+        DS-SAR
+        The DS-SAR satellite is developed under a partnership between DSTA (representing the Government of Singapore) and ST Engineering. Once deployed and operational, it will be used to support the satellite imagery requirements of various agencies within the Government of Singapore. ST Engineering will use it for multi-modal and higher responsiveness imagery and geospatial services for their commercial customers.
+        DS-SAR carries a Synthetic Aperture Radar (SAR) payload developed by Israel Aerospace Industries (IAI). This allows the DS-SAR to provide for all-weather day and night coverage, and capable of imaging at 1m-resolution at full polarimetry.
+        PSLV-C56 / DS-SAR, is the Dedicated Commercial Mission of NewSpace India Limite(NSIL) for ST Engineering, Singapore. DS-SAR, a Radar Imaging Earth Observation satellite is the primary satellite for the mission. In addition to this, there are six co-passenger customer satellites also belonging to Singapore. All satellites would be injected into 535 km circular with 5 orbital inclination.This is the 58th flight of PSLV and 17th flight of PSLV in Core Alone configuration.
+        After injecting all the satellites, the upper stage of the rocket would be placed in lower orbit to ensure its reduced orbital life. PSLV-C56 launch will be accomplished
+        from First Launch Pad (FLP) located at Satish Dhawan Space Centre (SDSC), Sriharikota.
+        “PSLV-C56 carrying seven satellites including the primary satellite DS-SAR and six co-passengers has been successfully placed in the right orbit. This is a PSLV mission for New Space India Limited [NSIL] and I want to congratulate the customers sponsored by the Government of Singapore for having this mission onboard PSLV and their continued faith in our launch vehicle for deploying their spacecraft,” ISRO Chairman S. Somnath said after the successful launch of the mission.
+
+The DS-SAR satellite is developed under a partnership between DSTA (representing the Government of Singapore) and ST Engineering.
+The co-passengers on the missions are VELOX-AM, a 23 kg technology demonstration microsatellite, ARCADE Atmospheric Coupling and Dynamics Explorer (ARCADE) which is an experimental satellite, SCOOB-II, a 3U nanosatellite flying a technology demonstrator payload, NuLIoN by NuSpace, an advanced 3U nanosatellite enabling seamless IoT connectivity in both urban and remote locations, Galassia-2, a 3U nanosatellite that will be orbiting at low earth orbit and ORB-12 STRIDER which is a satellite developed under an International collaboration.
+
+
+        </p>
+
+        <button id="colorChangeButton">Change Color</button>
+
+    <script>
+        
+        const button = document.getElementById("colorChangeButton");
+        const text = document.getElementById("colorfulText");
+
+        
+        const colors = ["white","skyblue","red", "lightgreen", "blue", "orange", "pink"];
+
+        let currentColorIndex = 0;
+
+        button.addEventListener("click", () => {
+            
+            text.style.color = colors[currentColorIndex];
+    
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        });
+    </script>
+</body>
+</html>
